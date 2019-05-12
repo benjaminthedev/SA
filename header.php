@@ -58,6 +58,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<form method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
 					<label class="sr-only" for="s"><?php esc_html_e( 'Search', 'understrap' ); ?></label>
 					<div class="input-group">
+						Icon Here
 						<input class="field form-control" id="s" name="s" type="text"
 							placeholder="<?php esc_attr_e( 'Search &hellip;', 'understrap' ); ?>" value="<?php the_search_query(); ?>">
 						<span class="input-group-append">
@@ -66,7 +67,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						</span>
 					</div>
 				</form>
-				
+
 				</div>
 
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
