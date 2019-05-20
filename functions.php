@@ -42,3 +42,15 @@ function get_scripts() {
     wp_enqueue_script( 'customJS', get_stylesheet_directory_uri() . '/js/custom.js', array(), '1.0.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'get_scripts' );
+
+//Custom Excerpt For WordPress Excerpt
+function custom_excerpt_length( $length ) {
+	return 20;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+//Removes the awful [...] from the WordPress Excerpt
+function trim_excerpt($text){
+	return str_replace(' [...]', '...', $text);
+}
+add_filter('get_the_excerpt', 'trim_excerpt');
