@@ -27,3 +27,13 @@ div.amazingslider-box-1 a:nth-child(1) {
    visibility: hidden !important;
 }
 
+ul.woocommerce-products-cats{
+  padding-inline-start: 0px;
+  display: flex;  
+  flex-wrap: wrap;
+}
+
+ul.woocommerce-products-cats li {
+  list-style: none;
+  width:25%;  
+}
