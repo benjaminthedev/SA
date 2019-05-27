@@ -63,16 +63,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<h4>Latest News</h4>
 
 		<?php	// WP_Query arguments
-$args = array(
-	'posts_per_page'         => '5',
-	'cat' => 46,
-	'order'                  => 'DESC',
-);
+		$args = array(
+			'posts_per_page' => '5',
+			'cat' => 46,
+			'order' => 'DESC',
+		);
+		// The Query
+		$query = new WP_Query( $args );?>
 
-// The Query
-$query = new WP_Query( $args );?>
-
-<?php // The Loop
+<?php // The Loops
 if ( $query->have_posts() ) {
 	while ( $query->have_posts() ) {
 		$query->the_post(); ?>
@@ -92,6 +91,11 @@ wp_reset_postdata();?>
 		</div>										
 		<div class="col-md-6">
 			<h3 class="text-center deals-heading">Special Deals</h3>
+
+	
+
+
+
 		</div>										
 		<div class="col-md-3">
 			<h4>Phil Grabsky's Blog</h4>
