@@ -54,16 +54,16 @@ $container = get_theme_mod( 'understrap_container_type' );
 						the_custom_logo();
 					} ?><!-- end custom logo -->
 
+
 				<div class="search-section">
 					<form method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
 					<label class="sr-only" for="s"><?php esc_html_e( 'Search', 'understrap' ); ?></label>
 					<div class="input-group">
-						Icon Here
 						<input class="field form-control" id="s" name="s" type="text"
 							placeholder="<?php esc_attr_e( 'Search &hellip;', 'understrap' ); ?>" value="<?php the_search_query(); ?>">
 						<span class="input-group-append">
-							<input class="submit btn btn-primary" id="searchsubmit" name="submit" type="submit"
-							value="<?php esc_attr_e( 'Search', 'understrap' ); ?>">
+							<input class="submit btn btn-primary" id="searchsubmit"  type="submit"
+							value="&#xf002;">
 						</span>
 					</div>
 				</form>
@@ -86,6 +86,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 						'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
 					)
 				); ?>
+
+
 			<?php if ( 'container' == $container ) : ?>
 			</div><!-- .container -->
 			<?php endif; ?>

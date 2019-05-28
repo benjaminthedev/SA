@@ -1,3 +1,15 @@
+//Fonts:
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap');
+
+*{
+  font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3, h4 , h5{
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+}
 
 // Header Section
 .navbar>.container, .navbar>.container-fluid{
@@ -16,15 +28,77 @@
     color:#666;
     text-decoration: underline;
 }
+ul#main-menu {
+    margin-top: -50px;
+}
+li.shop-link {
+    background: #ff9000;
+    padding: 0 15px;
+    margin-left: 10px;
+}
 //Header search section
 .search-section {
     float: right;
     width: 400px;
+    margin-top:20px;
 }
+form#searchform {
+    margin-right: -30px;
+}
+//Search in the header
+#wrapper-navbar input {
+  &#s {
+    background-color: #e6e6e6;
+    color: #979795;
+    border: 0;
+    -webkit-appearance: none;
+    font-weight: 400;
+  }
+  &#searchsubmit {
+    border: 0;
+    color:#90908e;
+    background-color: #e6e6e6;
+    width: 100%;
+    left:-38px;
+    z-index:4;
+  }
+  &[type="submit"] {
+    font-family: FontAwesome;
+  }
+}
+//Header Links
+ul#main-menu a.nav-link {
+    font-size: 18px;
+    font-weight: 300;
+} 
 
+
+//Homepage
+.main-slider{
+  margin-bottom: 20px;
+}
 // Slider Section - Remove WaterMark - Keep this water mark
 div.amazingslider-box-1 a:nth-child(1) { 
    visibility: hidden !important;
+}
+//Home View Section
+.home-view-logo{
+  padding: 20px 0;
+  margin: 0 auto;
+  display: block;
+}
+
+.home-view-heading{
+  text-transform: uppercase;
+  color:#ff9000;
+  font-size: 24px;
+  margin-bottom:30px;
+}
+
+#woo-cat-image{
+    height: 235px;
+    background-repeat: no-repeat;
+    display: flex;
 }
 
 ul.woocommerce-products-cats{
@@ -36,4 +110,51 @@ ul.woocommerce-products-cats{
 ul.woocommerce-products-cats li {
   list-style: none;
   width:25%;  
+  margin-bottom: 20px;
 }
+.title-container {
+    align-self: flex-end;
+    text-align: center;
+    width: 85%;
+    background: #6cf;
+    height: 30px;
+}
+
+//On Sale featured
+ul.on-sale-featured{
+  padding-inline-start: 0px;
+  display: flex;  
+  flex-wrap: wrap;
+}
+ul.on-sale-featured li{
+    list-style: none;
+    width: 28%;
+    margin: 10px;  
+}
+
+
+
+
+
+
+
+//Footer
+
+#wrapper-footer-full *{
+  color: #fff;
+}
+
+#wrapper-footer-full{
+  background-color: #545454;
+}
+.before-footer{
+  background-color: #881189;
+  padding: 10px 0;
+  color:#fff;
+}
+
+img.footer-logo {
+    width: 60%;
+    margin-bottom: 20px;
+}
+
