@@ -116,9 +116,31 @@ ul.woocommerce-products-cats li {
     align-self: flex-end;
     text-align: center;
     width: 85%;
-    background: #6cf;
+    // background: #6cf;
+    background: rgba(80, 76, 52, 0.8);
     height: 30px;
 }
+.title-container a{
+    color:#fff;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+}
+
+
+//Blog Feed On The Home Page
+
+.wp_rss_retriever_metadata,
+.wp_rss_retriever_image{
+  display: none;
+}
+
+ul.wp_rss_retriever_list {
+    padding-left: 0px;
+}
+
+.wp_rss_retriever li {
+    margin-bottom: 20px;
+  }
 
 //On Sale featured
 ul.on-sale-featured{
