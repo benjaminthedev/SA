@@ -126,9 +126,22 @@ ul.woocommerce-products-cats li {
     letter-spacing: 0.05em;
 }
 
+//Latest News On The Home Page
+.latest-news a {
+  &.news-title {
+    color: #000;
+  }
+  &.news-read-more {
+    color: #53f;
+  }
+  &.btn.btn-secondary.understrap-read-more-link {
+    display: none !important;
+  }
+}
+
+
 
 //Blog Feed On The Home Page
-
 .wp_rss_retriever_metadata,
 .wp_rss_retriever_image{
   display: none;
@@ -140,9 +153,15 @@ ul.wp_rss_retriever_list {
 
 .wp_rss_retriever li {
     margin-bottom: 20px;
-  }
+}
 
 //On Sale featured
+.deals-heading{
+  font-size: 22px;
+  text-transform: uppercase;
+  color:#ff9000;
+}
+
 ul.on-sale-featured{
   padding-inline-start: 0px;
   display: flex;  
@@ -153,6 +172,21 @@ ul.on-sale-featured li{
     width: 28%;
     margin: 10px;  
 }
+
+ul.on-sale-featured .product-info{
+  width: 70%;
+  margin: 0 auto;
+}
+ul.on-sale-featured span.title-product {
+    font-weight: 700;
+    font-size:12px;
+    line-height: 0px;
+}
+ ul.on-sale-featured span.price{
+  color:#ff9000;
+  font-size:12px;
+} 
+
 
 
 
@@ -178,5 +212,16 @@ ul.on-sale-featured li{
 img.footer-logo {
     width: 60%;
     margin-bottom: 20px;
+}
+
+ul.social-media-icons{
+  padding: 0px;
+}
+
+ul.social-media-icons li{
+  list-style-type: none;
+  float: left;
+  margin-right: 15px;
+  font-size: 46px;
 }
 

@@ -49,8 +49,14 @@ function custom_excerpt_length( $length ) {
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
+//Read More
+function custom_excerpt_more_link($more){
+  return '<a href="' . get_the_permalink() . '" rel="nofollow" class="news-read-more">&nbsp;read more »</a>';
+}
+add_filter('excerpt_more', 'custom_excerpt_more_link');
+
 //Removes the awful [...] from the WordPress Excerpt
 function trim_excerpt($text){
-	return str_replace(' [...]', '...', $text);
+	return str_replace(' [...]', '', $text);
 }
 add_filter('get_the_excerpt', 'trim_excerpt');

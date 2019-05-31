@@ -89,12 +89,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="wrapper">
 	<div class="row">
-		<div class="col-md-3">
+		<div class="col-md-3 latest-news mt-5">
 			<h4>Latest News</h4>
 
 		<?php	// WP_Query arguments
 		$args = array(
-			'posts_per_page' => '5',
+			'posts_per_page' => '4',
 			'cat' => 46,
 			'order' => 'DESC',
 		);
@@ -106,7 +106,7 @@ if ( $query->have_posts() ) {
 	while ( $query->have_posts() ) {
 		$query->the_post(); ?>
 		
-		<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+		<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="news-title"><?php the_title(); ?></a>
 
 		<?php the_excerpt(); ?>
 			
@@ -151,9 +151,10 @@ wp_reset_postdata();?>
 				</a>
 			<?php endif; ?>
 
-		    <?php echo $title_product; ?>
-				<?php echo $price_product; ?>
-
+				<div class="product-info">
+		    	<span class="title-product"><?php echo $title_product; ?></span>
+					<span class="price"><?php echo $price_product; ?></span>
+				</div>
 		</li>
 
 	<?php endwhile; ?>
@@ -164,7 +165,7 @@ wp_reset_postdata();?>
 
 		</div>										
 
-		<div class="col-md-3">
+		<div class="col-md-3 mt-5">
 			<h4>Phil Grabsky's Blog</h4>
 				<div class="external-rss-feed">
 	 				<?php echo do_shortcode('[wp_rss_retriever url="https://www.exhibitiononscreenblog.com/blog/?format=rss" items="3" excerpt="25" read_more="true" credits="false" new_window="true" thumbnail="200" cache="7200"]'); ?>
