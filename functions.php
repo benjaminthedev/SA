@@ -60,3 +60,15 @@ function trim_excerpt($text){
 	return str_replace(' [...]', '', $text);
 }
 add_filter('get_the_excerpt', 'trim_excerpt');
+
+
+/**
+ * Set WooCommerce image dimensions upon theme activation
+ */
+// Remove each style one by one
+	// add_filter( 'woocommerce_enqueue_styles', 'jk_dequeue_styles' );
+	// function jk_dequeue_styles( $enqueue_styles ) {
+	// 	unset( $enqueue_styles['woocommerce-layout'] );	// Remove the single product styles
+	// 	return $enqueue_styles;
+	// }
+

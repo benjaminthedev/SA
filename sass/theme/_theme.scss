@@ -28,9 +28,26 @@ h1, h2, h3, h4 , h5{
     color:#666;
     text-decoration: underline;
 }
+//Top Navigation
 ul#main-menu {
     margin-top: -50px;
 }
+ul#main-menu li a:hover{
+  color:#ff9000;
+}
+ul#main-menu li#menu-item-10638 a:hover{
+  color:#fff;
+}
+ul#main-menu li.current-menu-item a{
+  color:#ff9000;
+}
+ul#main-menu li.page-item-10635.current_page_item.active a{
+  color:#fff;
+}
+
+
+
+
 li.shop-link {
     background: #ff9000;
     padding: 0 15px;
@@ -187,16 +204,143 @@ ul.on-sale-featured span.title-product {
   font-size:12px;
 } 
 
+//Standard Template For Parallax
+.parallax { 
+  /* Set a specific height */
+  height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+// Shop Page Main Styles
+
+.page-id-10635 .woocommerce-loop-product__title,
+.page-id-10635 .woocommerce-Price-amount,
+.page-id-10635 .add-to-cart-container,
+.page-id-10635 h1.entry-title,
+.page-id-10635 .woocommerce-result-count{
+    display: none;
+}
+
+//.single-product 
+
+.single-product .woocommer-wrapper{
+  display: flex;
+  flex-direction: row-reverse;
+  // justify-content: flex-end;
+ 
+}
+
+.single-product .woocommer-wrapper .woocommerce{
+  width:50%;
+}
+
+.product-info-wrap {
+    width: 50%;
+}
+
+//Single WooCommer Page
+.single-product div#right-sidebar,
+.single-product .entry-meta,
+.single-product .product_meta,
+.single-product .entry-title,
+.single-product .entry-header,
+.single-product figure.woocommerce-product-gallery__wrapper{
+  display: none;
+}
+
+.single-product .product-info-images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+     height: 200px; 
+    width: 50%;
+}
+
+.single-product .product-info-images img{
+  width: 100%;
+  padding: 15px;
+}
 
 
 
 
+// Single Product Video Pop Up 
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 10; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
 
+/* Modal Content/Box */
+.modal-content {
+    /* background-color: #fefefe; */
+    margin: 5% auto;
+    padding: 0px 20px;
+    /* border: 1px solid #888; */
+    width: 90%;
+    background: none;
+    border: none;
+}
+
+/* The Close Button */
+.close {
+  /* color: #aaa;
+  float: right;
+  font-size: 32px;
+  font-weight: bold; */
+  display:none;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.parallax:hover{
+	cursor: pointer;
+}
+
+.embed-container { 
+  /* position: relative;  */
+  padding-bottom: 40.25%;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+} 
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed { 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
 
 //Footer
 
-#wrapper-footer-full *{
+#wrapper-footer-full a,
+#wrapper-footer-full p,
+#wrapper-footer-full span,
+#wrapper-footer-full .custom-html-widget,
+#wrapper-footer-full h3{
   color: #fff;
 }
 
@@ -225,3 +369,18 @@ ul.social-media-icons li{
   font-size: 46px;
 }
 
+ul.social-media-icons li a i.fab:hover{
+  color:#ff9000;
+}
+
+
+//Useful links
+ul#menu-useful-links{
+  padding: 0px;
+}
+ul#menu-useful-links li{
+  list-style-type: none;
+}
+ul#menu-useful-links li a:hover{
+  color:#ff9000;
+}
