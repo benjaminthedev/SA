@@ -85,13 +85,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 										while ( have_rows('content') ) : the_row();
 
 												if( get_row_layout() == 'content_info' ):?>
-
-													<?php the_sub_field('title'); ?>
-													<?php the_sub_field('running_time'); ?>
-													<?php the_sub_field('screen_size'); ?>
-													<?php the_sub_field('subtitles'); ?>
-													<?php the_sub_field('extra_info'); ?>
-
+												<div class="info-text">
+													<p><strong><?php the_sub_field('title'); ?></strong></p>
+													<p><?php the_sub_field('running_time'); ?></p>
+													<p><?php the_sub_field('screen_size'); ?></p>
+													<p><?php the_sub_field('subtitles'); ?></p>
+													<p><?php the_sub_field('extra_info'); ?></p>	
+												</div>
 												<?php 
 
 												endif;

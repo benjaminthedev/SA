@@ -190,8 +190,8 @@ ul.on-sale-featured li{
     margin: 10px;  
 }
 
-ul.on-sale-featured .product-info{
-  width: 70%;
+.home ul.on-sale-featured .product-info{
+  width: 100%;
   margin: 0 auto;
 }
 ul.on-sale-featured span.title-product {
@@ -226,23 +226,87 @@ ul.on-sale-featured span.title-product {
     display: none;
 }
 
-//.single-product 
+//Main BTN
+.btn-outline-primary, 
+.wpcf7 input[type=submit],
+.woocommerce #respond input#submit.alt, 
+.woocommerce a.button.alt, 
+.woocommerce button.button.alt, 
+.woocommerce input.button.alt {
+    background: #ff9000;
+    padding: 0 15px;
+    border: none;
+    color:#fff;  
+    cursor: pointer;
+    padding: 10px 10px;
+    border-radius: 0px;
+}
+.btn-outline-primary a, 
+.wpcf7 input[type=submit] a, 
+.woocommerce ul.products li.product a,
+button.btn.btn-outline-primary{
+    text-transform: uppercase !important;
+    font-size:12px !important;
+}
+.btn-outline-primary:hover, .wpcf7 input[type=submit]:hover, input.submit-newsletter:hover{
+    background: #bdbdbd;
+}
 
+// Submit btn newsletter
+input.submit-newsletter{
+    background: #ff9000;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 3px 20px;
+    border-radius: 0;
+    margin-left: 10px;
+}
+
+input.submit-newsletter:hover{
+    background: #bdbdbd;
+}
+
+.before-footer h5{
+  float: left;
+}
+.newsletter-sign-up {
+    margin-left: 50px !important;
+    float: left;
+}
+
+.newsletter-sign-up input[type="email"] {
+    width: 300px;
+    padding: 0 10px;
+
+}
+
+
+
+//.single-product
 .single-product .woocommer-wrapper{
   display: flex;
   flex-direction: row-reverse;
   // justify-content: flex-end;
  
 }
-
 .single-product .woocommer-wrapper .woocommerce{
   width:50%;
 }
-
 .product-info-wrap {
     width: 50%;
 }
+.product-info {
+    padding: 10px 20px;
+}
 
+.single-product .product-info .info-text {
+    margin-top: 30px;
+}
+.single-product .product-info .info-text p{
+    line-height: 20px;
+    margin-bottom: 4px;
+}
 //Single WooCommer Page
 .single-product div#right-sidebar,
 .single-product .entry-meta,
@@ -265,6 +329,29 @@ ul.on-sale-featured span.title-product {
   width: 100%;
   padding: 15px;
 }
+
+//Related & Upsale Products 
+.single-product section.up-sells.upsells.products span.price,
+.single-product section.related.products span.price{
+  display:none !important;
+}
+
+.single-product a.woocommerce-LoopProduct-link.woocommerce-loop-product__link{
+  color: #000;
+}
+.single-product a.woocommerce-LoopProduct-link.woocommerce-loop-product__link:hover{
+  color:#ff9000;
+}
+
+.single-product .summary.entry-summary p.price {
+    display:none;
+}
+
+//Single Product Nav 
+.single-product nav.container.navigation.post-navigation {
+    display: none;
+}
+
 
 
 
