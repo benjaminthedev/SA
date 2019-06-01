@@ -1,8 +1,5 @@
 jQuery(document).ready(function () {
-    jQuery('.single-product .woocommerce-product-gallery, .single-product .woocommerce-notices-wrapper, .single-product ul.tabs.wc-tabs').hide();   
-        
-    
-
+    jQuery('.single-product .woocommerce-product-gallery, .single-product .woocommerce-notices-wrapper, .single-product ul.tabs.wc-tabs').hide();       
     //Move the add to basket to the right place
     jQuery('.entry-summary').detach().prependTo('.product-info');
 });
@@ -17,12 +14,12 @@ let para = document.getElementById("clicked-para");
 let span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal 
-para.onclick = () => {
+para.onclick = function() {
     modal.style.display = "block";
 }
 
 // When the user clicks on <span> (x), clos	e the modal
-span.onclick = () => {
+span.onclick = function() {
     modal.style.display = "none";
 }
 

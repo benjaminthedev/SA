@@ -39,7 +39,14 @@ foreach ( $understrap_includes as $file ) {
  * Proper way to enqueue scripts and styles.
  */
 function get_scripts() {
-    wp_enqueue_script( 'customJS', get_stylesheet_directory_uri() . '/js/custom.js', array(), '1.0.0', true );
+		//Use as template if needed.
+	//wp_enqueue_script( 'customJSProductPage', get_stylesheet_directory_uri() . '/js/single-product.js', array(), '1.0.0', true );
+	
+	//Conditionally Loading The JS for single product
+	if (is_product()) {
+		wp_enqueue_script( 'customJSProductPage', get_stylesheet_directory_uri() . '/js/single-product.js', array(), '1.0.0', true );
+	}
+  
 }
 add_action( 'wp_enqueue_scripts', 'get_scripts' );
 
@@ -60,15 +67,3 @@ function trim_excerpt($text){
 	return str_replace(' [...]', '', $text);
 }
 add_filter('get_the_excerpt', 'trim_excerpt');
-
-
-/**
- * Set WooCommerce image dimensions upon theme activation
- */
-// Remove each style one by one
-	// add_filter( 'woocommerce_enqueue_styles', 'jk_dequeue_styles' );
-	// function jk_dequeue_styles( $enqueue_styles ) {
-	// 	unset( $enqueue_styles['woocommerce-layout'] );	// Remove the single product styles
-	// 	return $enqueue_styles;
-	// }
-
