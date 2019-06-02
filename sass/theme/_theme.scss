@@ -302,7 +302,20 @@ input.submit-newsletter:hover{
 
 .single-product .product-info .info-text {
     margin-top: 30px;
+    clear: both;
 }
+
+//Single Product CSS Quantity Box etc - Will need seperate css conditional loading for this css 
+// .single-product .summary.entry-summary {
+//     clear: both;
+//     width: 31%;
+//     border: 1px solid #999;
+//     float: left;
+//     display: block;
+//     height: 150px;
+//     margin: 6px;
+//     padding: 10px;
+// }
 .single-product .product-info .info-text p{
     line-height: 20px;
     margin-bottom: 4px;
@@ -343,9 +356,7 @@ input.submit-newsletter:hover{
   color:#ff9000;
 }
 
-.single-product .summary.entry-summary p.price {
-    display:none;
-}
+
 
 //Single Product Nav 
 .single-product nav.container.navigation.post-navigation {
@@ -384,15 +395,22 @@ a.woocommerce-LoopProduct-link.woocommerce-loop-product__link {
     margin: 6px;
     padding: 10px;
 }
-// .single-product td.woocommerce-grouped-product-list-item__quantity {
-//     display: block;
-// }
 .single-product td.woocommerce-grouped-product-list-item__label {
     display: block;
 }
-// .single-product td.woocommerce-grouped-product-list-item__price {
-//     display: block;
+//Bug in the JS fix
+// td.woocommerce-grouped-product-list-item__label:nth-child(2),
+// td.woocommerce-grouped-product-list-item__label:nth-child(3) {
+//     display: none;
 // }
+.single-product button.single_add_to_cart_button.button.alt {
+    margin-top: 10px;
+}
+.single-product .woocommerce-grouped-product-list-item label  a{
+  color:#000;
+}
+
+
 
 
 // Single Product Video Pop Up 
