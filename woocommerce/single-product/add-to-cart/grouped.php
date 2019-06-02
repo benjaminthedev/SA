@@ -20,6 +20,11 @@ defined( 'ABSPATH' ) || exit;
 global $product, $post;
 
 do_action( 'woocommerce_before_add_to_cart_form' ); ?>
+<style>
+.single-product .summary.entry-summary p.price {
+    display:none;
+}
+</style>
 
 <form class="cart grouped_form" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data'>
 	<table cellspacing="0" class="woocommerce-grouped-product-list group_table">
@@ -28,8 +33,8 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 			$quantites_required      = false;
 			$previous_post           = $post;
 			$grouped_product_columns = apply_filters( 'woocommerce_grouped_product_columns', array(
-				'quantity',
 				'label',
+				'quantity',
 				'price',
 			), $product );
 
