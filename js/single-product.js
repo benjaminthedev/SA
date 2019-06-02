@@ -2,6 +2,7 @@ jQuery(document).ready(function () {
     jQuery('.single-product .woocommerce-product-gallery, .single-product .woocommerce-notices-wrapper, .single-product ul.tabs.wc-tabs').hide();       
     //Move the add to basket to the right place
     jQuery('.entry-summary').detach().prependTo('.product-info');
+    //jQuery('.single-product td.woocommerce-grouped-product-list-item__quantity').prependTo('.single-product td.woocommerce-grouped-product-list-item__label');
 });
 
 // Get the modal

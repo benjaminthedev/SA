@@ -352,7 +352,9 @@ input.submit-newsletter:hover{
     display: none;
 }
 
-
+a.woocommerce-LoopProduct-link.woocommerce-loop-product__link {
+    color: #000;
+}
 
 
 .woocommerce-cart div#right-sidebar,
@@ -367,11 +369,30 @@ input.submit-newsletter:hover{
   text-emphasis: uppercase;
  }
 
-
-
  .woocommerce-cart .wc-proceed-to-checkout a.btn.btn-primary.btn-lg.btn-block:hover{
     background: #bdbdbd;
 }
+
+// Single Product Pricing Box
+
+.single-product tr {
+    width: 31%;
+    border: 1px solid #999;
+    float: left;
+    display: block;
+    height: 230px;
+    margin: 6px;
+    padding: 10px;
+}
+// .single-product td.woocommerce-grouped-product-list-item__quantity {
+//     display: block;
+// }
+.single-product td.woocommerce-grouped-product-list-item__label {
+    display: block;
+}
+// .single-product td.woocommerce-grouped-product-list-item__price {
+//     display: block;
+// }
 
 
 // Single Product Video Pop Up 
