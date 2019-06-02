@@ -355,6 +355,24 @@ input.submit-newsletter:hover{
 
 
 
+.woocommerce-cart div#right-sidebar,
+.woocommerce-checkout div#right-sidebar{ 
+  display: none;
+ }
+
+ .woocommerce-cart .wc-proceed-to-checkout a.btn.btn-primary.btn-lg.btn-block{
+  // color:#ff9000;
+  background-color:#ff9000;
+  border: none;
+  text-emphasis: uppercase;
+ }
+
+
+
+ .woocommerce-cart .wc-proceed-to-checkout a.btn.btn-primary.btn-lg.btn-block:hover{
+    background: #bdbdbd;
+}
+
 
 // Single Product Video Pop Up 
 /* The Modal (background) */
