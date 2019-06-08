@@ -3,7 +3,7 @@ jQuery(document).ready(function () {
     //Move the add to basket to the right place
     jQuery('.entry-summary').detach().prependTo('.product-info');
     //Name
-    //jQuery('.single-product td.woocommerce-grouped-product-list-item__label').prependTo('.single-product .woocommerce-grouped-product-list-item');
+    //jQuery('.single-product td.woocommerce-grouped-product-list-item__label').prependTo('.single-product .    ');
 
     jQuery('.single-product button.single_add_to_cart_button.button.alt').appendTo('.single-product .woocommerce-grouped-product-list-item');
 
