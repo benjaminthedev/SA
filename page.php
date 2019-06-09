@@ -17,15 +17,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
-<?php if( get_field('parallax_image') ): ?>
-	<div class="parallax" id="clicked-para" style="background-image: url(<?php the_field('parallax_image'); ?>);"></div>
-<?php endif; ?>
+
 
 <div class="wrapper" id="page-wrapper">
 
+
+
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+	<?php if( get_field('parallax_image') ): ?>
+		<div class="parallax pro-cat-page"  style="background-image: url(<?php the_field('parallax_image'); ?>);"></div>
+	<?php endif; ?>
 
 		<div class="row">
+
+
+		
 
 			<!-- Do the left sidebar check -->
 			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
