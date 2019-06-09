@@ -207,13 +207,17 @@ ul.on-sale-featured span.title-product {
 //Standard Template For Parallax
 .parallax { 
   /* Set a specific height */
-  height: 500px; 
-
+  height: 250px; 
+  margin-bottom: 50px;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
-  background-position: center;
+  // background-position: center;
+  background-position: 53% 30%;
   background-repeat: no-repeat;
-  background-size: cover;
+  // background-size: cover;
+}
+.parallax.single-pro-page:hover{
+	cursor: pointer;
 }
 
 // Shop Page Main Styles
@@ -356,6 +360,16 @@ input.submit-newsletter:hover{
   color:#ff9000;
 }
 
+// Product with info
+ul.ways-to-watch{
+  list-style-type:none;
+  padding: 0px;
+  margin:0px;
+}
+
+.ways-heading{
+  margin-top:20px;
+}
 
 
 //Single Product Nav 
@@ -453,10 +467,6 @@ a.woocommerce-LoopProduct-link.woocommerce-loop-product__link {
   color: black;
   text-decoration: none;
   cursor: pointer;
-}
-
-.parallax:hover{
-	cursor: pointer;
 }
 
 .embed-container { 
