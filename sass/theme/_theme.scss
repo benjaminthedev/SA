@@ -359,6 +359,11 @@ input.submit-newsletter:hover{
 .single-product a.woocommerce-LoopProduct-link.woocommerce-loop-product__link:hover{
   color:#ff9000;
 }
+img.icons-list {
+    width: 6%;
+    margin-right: 10px;
+}
+
 
 // Product with info
 ul.ways-to-watch{
@@ -396,6 +401,17 @@ a.woocommerce-LoopProduct-link.woocommerce-loop-product__link {
 
  .woocommerce-cart .wc-proceed-to-checkout a.btn.btn-primary.btn-lg.btn-block:hover{
     background: #bdbdbd;
+}
+
+blockquote,
+span.quote{
+    margin: 0 0 1rem;
+    font-size: 22px;
+    font-style: oblique;
+    display: block;
+}
+.woocommerce-Tabs-panel h2:nth-child(1){
+  display: none;
 }
 
 // Single Product Pricing Box
@@ -538,3 +554,38 @@ ul#menu-useful-links li{
 ul#menu-useful-links li a:hover{
   color:#ff9000;
 }
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+  .search-section {
+    display: none;
+  }
+
+  ul.woocommerce-products-cats li {
+    list-style: none;
+    width: 72%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    }
+ }
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) { 
+
+  
+  ul.woocommerce-products-cats li {
+    list-style: none;
+    width: 54%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    }
+
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {  }
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {  }
+

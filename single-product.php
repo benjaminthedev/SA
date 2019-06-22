@@ -43,7 +43,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 <?php if( get_field('parallax_image') ): ?>
 	<div class="parallax single-pro-page" id="clicked-para" style="background-image: url(<?php the_field('parallax_image'); ?>);"></div>
-<?php endif; ?>
+	
+
+ <?php else: ?>
+
+ <div class="parallax single-pro-page" id="clicked-para" style="background-image: url('http://localhost:8888/seventhArt/wp-content/uploads/2019/06/EOS-Header.jpg');"></div>
+       
+                            <?php endif; ?>
+	
 		<div class="row">
 
 			<main class="site-main" id="main">
@@ -83,9 +90,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 
 						<ul class="ways-to-watch">
-							<li class="dvd">DVD - A physical copy to your address</li>
-							<li class="download">Download to your computer </li>
-							<li class="stream">Stream to your device, watch instantly </li>
+							<li class="dvd"><img src="http://localhost:8888/seventhArt/wp-content/uploads/2019/06/DVD-ICON.jpg" class="icons-list"> DVD - A physical copy to your address</li>
+							<li class="download"> <img src="http://localhost:8888/seventhArt/wp-content/uploads/2019/06/Download-Icon.jpg" class="icons-list">Download to your computer </li>
+							<li class="stream"><img src="http://localhost:8888/seventhArt/wp-content/uploads/2019/06/Stream-Icon.jpg" class="icons-list"> Stream to your device, watch instantly </li>
 						</ul>	
 
 

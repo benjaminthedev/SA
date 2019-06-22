@@ -67,3 +67,28 @@ function trim_excerpt($text){
 	return str_replace(' [...]', '', $text);
 }
 add_filter('get_the_excerpt', 'trim_excerpt');
+
+
+
+//Short code for [quote]
+function caption_shortcode( $atts, $content = null ) {
+	return '<span class="quote">' . $content . '</span>';
+}
+add_shortcode( 'quote', 'caption_shortcode' );
+
+
+//Just show grouped products
+add_filter( 'woocommerce_product_query_tax_query', 'only_grouped_products', 20, 1 );
+function only_grouped_products( $tax_query ){
+    $tax_query[] = array(
+        'taxonomy'  => 'product_type',
+        'field'     => 'name',
+        'terms'     => array('grouped'),
+    );
+    return $tax_query;
+}
+
+
+  
+  
+  
