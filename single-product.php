@@ -42,12 +42,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 <?php if( get_field('parallax_image') ): ?>
-	<div class="parallax single-pro-page" id="clicked-para" style="background-image: url(<?php the_field('parallax_image'); ?>);"></div>
+	<div class="parallax-no single-pro-page" id="clicked-para" style="background-image: url(<?php the_field('parallax_image'); ?>);"></div>
 	
 
  <?php else: ?>
-
- <div class="parallax single-pro-page" id="clicked-para" style="background-image: url('http://localhost:8888/seventhArt/wp-content/uploads/2019/06/EOS-Header.jpg');"></div>
+dededee
+ <div class="parallax-no single-pro-page" id="clicked-para" style="background-image: url('http://localhost:8888/seventhArt/wp-content/uploads/2019/06/EOS-Header.jpg');"></div>
        
                             <?php endif; ?>
 	

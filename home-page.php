@@ -32,7 +32,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 											
 											<?php the_content();?>		
 											
-											<img src="<?php the_field('home_view_logo'); ?>" alt="Home View Logo" class="home-view-logo"/>
+											<img src="<?php the_field('home_view_logo'); ?>" alt="Home View Logo" class="home-view-logo" id="home-view-logo"/>
 											<h2 class="text-center home-view-heading"><?php the_field('home_view_text'); ?></h2>
 
 
@@ -48,7 +48,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 											
 									
 									?>
-								<li>
+								<li class="increment">
 	
 														
 								
