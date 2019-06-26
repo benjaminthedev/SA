@@ -46,7 +46,12 @@ function get_scripts() {
 	if (is_product()) {
 		wp_enqueue_script( 'customJSProductPage', get_stylesheet_directory_uri() . '/js/single-product.js', array(), '1.0.0', true );
 	}
+
+	if (is_page(262)) {
+		wp_enqueue_script( 'homeJs', get_stylesheet_directory_uri() . '/js/home-page.js', array(), '1.0.0', true );
+	}
   
+	
 }
 add_action( 'wp_enqueue_scripts', 'get_scripts' );
 
@@ -78,15 +83,15 @@ add_shortcode( 'quote', 'caption_shortcode' );
 
 
 //Just show grouped products
-add_filter( 'woocommerce_product_query_tax_query', 'only_grouped_products', 20, 1 );
-function only_grouped_products( $tax_query ){
-    $tax_query[] = array(
-        'taxonomy'  => 'product_type',
-        'field'     => 'name',
-        'terms'     => array('grouped'),
-    );
-    return $tax_query;
-}
+// add_filter( 'woocommerce_product_query_tax_query', 'only_grouped_products', 20, 1 );
+// function only_grouped_products( $tax_query ){
+//     $tax_query[] = array(
+//         'taxonomy'  => 'product_type',
+//         'field'     => 'name',
+//         'terms'     => array('grouped'),
+//     );
+//     return $tax_query;
+// }
 
 
   
