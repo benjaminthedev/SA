@@ -46,7 +46,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	
 
  <?php else: ?>
-dededee
+
  <div class="parallax-no single-pro-page" id="clicked-para" style="background-image: url('http://localhost:8888/seventhArt/wp-content/uploads/2019/06/EOS-Header.jpg');"></div>
        
                             <?php endif; ?>
@@ -109,7 +109,7 @@ dededee
 													<p><strong><?php the_sub_field('title'); ?></strong></p>
 													<p><?php the_sub_field('running_time'); ?></p>
 													<p><?php the_sub_field('screen_size'); ?></p>
-													<p><?php the_sub_field('subtitles'); ?></p>
+													<p><strong>DVD has these subtitle</strong>: <?php the_sub_field('subtitles'); ?></p>
 													<p><?php the_sub_field('extra_info'); ?></p>	
 												</div>
 												<?php 
