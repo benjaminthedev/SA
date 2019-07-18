@@ -47,7 +47,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
  <?php else: ?>
 
- <div class="parallax-no single-pro-page" id="clicked-para" style="background-image: url('https://wordpress-293167-900918.cloudwaysapps.com/wp-content/uploads/2019/06/EOS-Header.jpg');"></div>
+ <div class="parallax-no single-pro-page no-click" id="clicked-para" style="background-image: url('https://wordpress-293167-900918.cloudwaysapps.com/wp-content/uploads/2019/06/EOS-Header.jpg');"></div>
        
                             <?php endif; ?>
 	
@@ -92,7 +92,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 						<ul class="ways-to-watch">
 							<li class="dvd"><img src="https://wordpress-293167-900918.cloudwaysapps.com/wp-content/uploads/2019/06/DVD-ICON.jpg" class="icons-list"> DVD - A physical copy to your address</li>
-							<li class="download"> <img src="https://wordpress-293167-900918.cloudwaysapps.comwp-content/uploads/2019/06/Download-Icon.jpg" class="icons-list">Download to your computer </li>
+							<li class="download"> <img src="https://wordpress-293167-900918.cloudwaysapps.com/wp-content/uploads/2019/06/Download-Icon.jpg" class="icons-list">Download to your computer </li>
 							<li class="stream"><img src="https://wordpress-293167-900918.cloudwaysapps.com/wp-content/uploads/2019/06/Stream-Icon.jpg" class="icons-list"> Stream to your device, watch instantly </li>
 						</ul>	
 

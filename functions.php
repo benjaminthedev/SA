@@ -82,7 +82,8 @@ function caption_shortcode( $atts, $content = null ) {
 add_shortcode( 'quote', 'caption_shortcode' );
 
 
-//Just show grouped products
+//Just show grouped products - do this when you have all products grouped
+
 // add_filter( 'woocommerce_product_query_tax_query', 'only_grouped_products', 20, 1 );
 // function only_grouped_products( $tax_query ){
 //     $tax_query[] = array(

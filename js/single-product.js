@@ -1,5 +1,3 @@
-// import { link } from "fs";
-
 jQuery(document).ready(function () {
     jQuery('.single-product .woocommerce-product-gallery, .single-product .woocommerce-notices-wrapper, .single-product ul.tabs.wc-tabs').hide();
     //Move the add to basket to the right place
@@ -24,6 +22,22 @@ let span = document.getElementsByClassName("close")[0];
 para.onclick = function () {
     modal.style.display = "block";
 }
+
+//When parallax-no had the class no-click then block the pop up
+
+const removeClass = document.querySelector('.parallax-no').classList.contains('no-click');
+
+if (removeClass == true) {
+    // removeClass.remove('clicked-para');
+    para.onclick = function () {
+        modal.style.display = "none";
+    }
+    console.log('removed');
+}
+
+
+//console.log(removeClass);
+
 
 // When the user clicks on <span> (x), clos	e the modal
 span.onclick = function () {
