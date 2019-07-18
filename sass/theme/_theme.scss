@@ -18,14 +18,30 @@ p{
   font-size: 18px;
 }
 
+.woocommerce .woocommerce-ordering, .woocommerce-page .woocommerce-ordering,
+p.woocommerce-result-count {
+    display: none;
+}
+
+ul.products .woocommerce-loop-product__title{
+    padding: .5em 20px !important;
+    font-size: 1.3em!important;
+    line-height: 26px !important;
+}
+
 ul.products li span.price,
-ul.products .add-to-cart-container,
-ul.products .woocommerce-loop-product__title {
+ul.products .add-to-cart-container{
     display: none !important;
 }
 
+.wpmenucart-display-right * {
+    color: #000 !important;
+}
 
-
+.wpmenucart-display-right {
+    float: right !important;
+    margin-top: 10px;
+}
 
 
 
@@ -133,22 +149,26 @@ h1.first-heading {
 .main-slider{
   margin-bottom: 20px;
 }
+
 // Slider Section - Remove WaterMark - Keep this water mark
 div.amazingslider-box-1 a:nth-child(1) { 
    visibility: hidden !important;
 }
 //Home View Section
 .home-view-logo{
-  padding: 20px 0;
+  // padding: 20px 0;
   margin: 0 auto;
+  width: 30%;
   display: block;
+  margin-top: -10px;
+
 }
 
 .home-view-heading{
   text-transform: uppercase;
   color:#ff9000;
   font-size: 24px;
-  margin-bottom:30px;
+  // margin-bottom:30px;
 }
 
 #woo-cat-image{
@@ -264,11 +284,12 @@ ul.on-sale-featured span.title-product {
 .parallax { 
   /* Set a specific height */
   height: 250px; 
-  margin-bottom: 50px;
+  margin-bottom: 15px;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   // background-position: center;
-  background-position: 53% 30%;
+  // background-position: 53% 30%;
+  background-position: 53% 17%;
   background-repeat: no-repeat;
   // background-size: cover;
 }
@@ -305,6 +326,7 @@ li#menu-item-10828:hover a:hover {
 .page-id-10635 .woocommerce-Price-amount,
 .page-id-10635 .add-to-cart-container,
 .page-id-10635 h1.entry-title,
+.woocommerce h1.entry-title,
 .page-id-10635 .woocommerce-result-count{
     display: none;
 }
@@ -672,4 +694,10 @@ ul#menu-useful-links li a:hover{
   .container {
       max-width: 1280px;
   }
+  .main-slider{
+    margin-top: -30px;
+  }
+  .parallax{
+    margin-top: -30px;
+  }    
 }
