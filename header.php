@@ -21,6 +21,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 	<?php wp_head(); ?>
+	<link rel="icon" href="https://wordpress-293167-900918.cloudwaysapps.com/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="https://wordpress-293167-900918.cloudwaysapps.com/favicon.ico" type="image/x-icon" />
 </head>
 
 <body <?php body_class(); ?>>
@@ -57,17 +59,25 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 
 				<div class="search-section">
-					<form method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
-					<label class="sr-only" for="s"><?php esc_html_e( 'Search', 'understrap' ); ?></label>
+
+
+					<?php echo do_shortcode ('[woocommerce_product_search]'); ?>
+
+
+
+
+
+					<!-- <form method="get" id="searchform" action="<?php //echo esc_url( home_url( '/' ) ); ?>" role="search">
+					<label class="sr-only" for="s"><?php //esc_html_e( 'Search', 'understrap' ); ?></label>
 					<div class="input-group">
 						<input class="field form-control" id="s" name="s" type="text"
-							placeholder="<?php esc_attr_e( 'Search &hellip;', 'understrap' ); ?>" value="<?php the_search_query(); ?>">
+							placeholder="<?php //esc_attr_e( 'Search &hellip;', 'understrap' ); ?>" value="<?php //the_search_query(); ?>">
 						<span class="input-group-append">
 							<input class="submit btn btn-primary" id="searchsubmit"  type="submit"
 							value="&#xf002;">
 						</span>
 					</div>
-				</form>
+				</form> -->
 
 				</div>
 
