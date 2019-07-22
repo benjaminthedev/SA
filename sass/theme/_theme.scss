@@ -1,3 +1,12 @@
+//Hiding of products that are not needed - Causes Issues
+// .woocommerce-page li.product.type-product.post-11000,
+// .woocommerce-page li.product.type-product.post-10995,
+// .woocommerce-page li.product.type-product.post-10018,
+// .woocommerce-page li.product.type-product.post-10019{
+//   display:none;
+// }
+
+
 //Fonts:
 
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap');
@@ -130,6 +139,14 @@ form#searchform {
   &[type="submit"] {
     font-family: FontAwesome;
   }
+}
+input#product-search-field-0 {
+    background-color: #e6e6e6;
+    color: #979795;
+    border: 0;
+    -webkit-appearance: none;
+    font-weight: 400;
+    padding: 10px 15px;
 }
 //Header Links
 ul#main-menu a.nav-link {
@@ -517,6 +534,23 @@ span.quote{
 
 // Single Product Pricing Box
 
+
+.quantity [type=button] {
+    -webkit-appearance: button;
+    background: #ff9000;
+    color: #fff;
+    padding: 5px 15px;
+}
+
+.quantity [type=button]:hover{
+  background: #96588a;
+}
+.quantity {
+    display: flex;
+    flex-direction: row;
+    /* width: 100% !important; */
+}
+
 .single-product tr {
     width: 31%;
     border: 1px solid #999;
@@ -526,7 +560,8 @@ span.quote{
     margin: 6px;
     padding: 10px;
 }
-.single-product td.woocommerce-grouped-product-list-item__label {
+.single-product td.woocommerce-grouped-product-list-item__label,
+.single-product td.woocommerce-grouped-product-list-item__quantity {
     display: block;
 }
 //Bug in the JS fix
@@ -655,6 +690,15 @@ ul#menu-useful-links li{
 ul#menu-useful-links li a:hover{
   color:#ff9000;
 }
+
+
+// Single Product Styles
+
+.postid-11059 .single-product tr{
+  width: 70% !important;
+}
+
+
 
 
 // Extra small devices (portrait phones, less than 576px)
