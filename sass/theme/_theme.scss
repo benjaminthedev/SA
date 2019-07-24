@@ -289,12 +289,14 @@ ul.on-sale-featured li{
 }
 ul.on-sale-featured span.title-product {
     font-weight: 700;
-    font-size:12px;
+    font-size:18px;
     line-height: 0px;
 }
  ul.on-sale-featured span.price{
-  color:#ff9000;
-  font-size:12px;
+  color: #ff9000;
+    font-size: 16px;
+    display: block;
+    margin-top: 10px;
 } 
 
 //Standard Template For Parallax
@@ -303,12 +305,12 @@ ul.on-sale-featured span.title-product {
   height: 250px; 
   margin-bottom: 15px;
   /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  // background-position: center;
+  // background-attachment: fixed;
+  background-position: center;
   // background-position: 53% 30%;
   background-position: 53% 17%;
   background-repeat: no-repeat;
-  // background-size: cover;
+  background-size: cover;
 }
 .parallax.single-pro-page:hover{
 	cursor: pointer;
@@ -341,7 +343,7 @@ li#menu-item-10828:hover a:hover {
 
 .page-id-10635 .woocommerce-loop-product__title,
 .page-id-10635 .woocommerce-Price-amount,
-.page-id-10635 .add-to-cart-container,
+
 .page-id-10635 h1.entry-title,
 .woocommerce h1.entry-title,
 .page-id-10635 .woocommerce-result-count{
@@ -707,29 +709,33 @@ ul#menu-useful-links li a:hover{
     display: none;
   }
 
-  ul.woocommerce-products-cats li {
-    list-style: none;
-    width: 72%;
-    margin: 0 auto;
-    margin-bottom: 50px;
-    }
+ 
+
+
+ul.home-cats li {
+    list-style-type: none !important;
+    float: left !important;
+    margin-right: 25px !important;
+    width: 100% !important;
+    margin-bottom: 30px !important;
+    /* margin: 0 auto; */
+}
+
+
  }
 
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) { 
 
   
-  ul.woocommerce-products-cats li {
-    list-style: none;
-    width: 54%;
-    margin: 0 auto;
-    margin-bottom: 50px;
-    }
+
 
 }
 
 // Medium devices (tablets, less than 992px)
-@media (max-width: 991.98px) {  }
+@media (max-width: 991.98px) { 
+
+ }
 
 // Large devices (desktops, less than 1200px)
 @media (max-width: 1199.98px) {  }
