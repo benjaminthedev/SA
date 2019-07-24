@@ -94,7 +94,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<?php	// WP_Query arguments
 		$args = array(
-			'posts_per_page' => '1',
+			'posts_per_page' => '2',
 			'cat' => 46,
 			'order' => 'DESC',
 		);
@@ -168,7 +168,7 @@ wp_reset_postdata();?>
 		<div class="col-md-3 mt-5">
 			<h4>Phil Grabsky's Blog</h4>
 				<div class="external-rss-feed">
-	 				<?php echo do_shortcode('[wp_rss_retriever url="https://www.exhibitiononscreenblog.com/blog/?format=rss" items="1" excerpt="25" read_more="true" credits="false" new_window="true" thumbnail="200" cache="7200"]'); ?>
+	 				<?php echo do_shortcode('[wp_rss_retriever url="https://www.exhibitiononscreenblog.com/blog/?format=rss" items="2" excerpt="25" read_more="true" credits="false" new_window="true" thumbnail="200" cache="7200"]'); ?>
 	 			</div>		 
 		</div>										
 	</div>
