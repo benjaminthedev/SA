@@ -87,7 +87,7 @@ add_shortcode( 'quote', 'caption_shortcode' );
 add_filter( 'woocommerce_product_query_tax_query', 'only_grouped_products', 20, 1 );
 function only_grouped_products( $tax_query ){
 
-	if (is_product_category(array( 311, 47, 50))) {
+	if (is_product_category(array( 311, 47, 50, 53))) {
 		
 		$tax_query[] = array(
         'taxonomy'  => 'product_type',
