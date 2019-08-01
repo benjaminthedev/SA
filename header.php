@@ -21,8 +21,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 	<?php wp_head(); ?>
-	<link rel="icon" href="https://wordpress-293167-900918.cloudwaysapps.com/favicon.ico" type="image/x-icon" />
-	<link rel="shortcut icon" href="https://wordpress-293167-900918.cloudwaysapps.com/favicon.ico" type="image/x-icon" />
+	<link rel="icon" href="https://wordpress-293167-900918.cloudwaysapps.com/favicon.png" type="image/x-icon" />
+	<link rel="shortcut icon" href="https://wordpress-293167-900918.cloudwaysapps.com/favicon.png" type="image/x-icon" />
 </head>
 
 <body <?php body_class(); ?>>
