@@ -1,18 +1,9 @@
-//Hiding of products that are not needed - Causes Issues
-// .woocommerce-page li.product.type-product.post-11000,
-// .woocommerce-page li.product.type-product.post-10995,
-// .woocommerce-page li.product.type-product.post-10018,
-// .woocommerce-page li.product.type-product.post-10019{
-//   display:none;
-// }
-
-
 //Fonts:
 
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap');
 
 *{
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', sans-serif !important;
 }
 
 div#comments {
