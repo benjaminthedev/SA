@@ -1,12 +1,4 @@
-//alert('home');
-
-console.log('Home JS loaded');
-
-
-
 const original = document.querySelectorAll('.increment');
-
-// original[0].style.color = 'red';
 
 original[0].addEventListener('click',
     function () {
