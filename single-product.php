@@ -13,20 +13,29 @@ get_header();
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
+    <div class="modal-content modal-lg">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <?php the_field('video_pop_up'); ?>
+        <?php //the_field('video_pop_up'); ?>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
+    </div>
+  </div>
+</div> -->
+
+
+<div id="modal" class="modal fade bd-example-modal-lg mt-5" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <?php the_field('video_pop_up'); ?>
     </div>
   </div>
 </div>
@@ -34,15 +43,78 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 
 
+
+
 <script>
 
 
-jQuery(document).ready(function(){
+
+jQuery(window).on("load", function(){
+  
+  	jQuery( "#single-wrapper" ).click(function() {
+		jQuery('#modal').modal('show');
+		// console.log('Testing Tesla Model 3');
+	});
+
+
+//Stops the videos when clicked away
+	 jQuery('#modal').each(function(){
+            var src = jQuery(this).find('iframe').attr('src');
+
+        jQuery(this).on('click', function(){
+
+            jQuery(this).find('iframe').attr('src', '');
+            jQuery(this).find('iframe').attr('src', src);
+
+		});
+	});
+	
+
+	
+	// var ele = document.getElementById('single-wrapper');
+
+	// for( ele = 0; ele < 10; ele++){
+	// 	jQuery("#single-wrapper"+ele+"").click(function(){
+	// 		console.log("You have clicked: ", jQuery(this).attr('id'));            
+	// 	});
+	// }
+
+
+const ele = document.getElementById('single-wrapper');
+let x = 0;
+
+ele.addEventListener('click', () => {
+console.log(`You have clicked:`, ++x, `times`);
+
+if (x >= 2){
+	console.log(`a message`);
+	location.reload(true);
+} 
+
+});
+
+
+
+
+
+
+	// jQuery("#single-wrapper").one("click", function() {
+	// 	console.log("Here after you cant click Div id1. Only once fired");
+	// 	location.reload(true);
+	// });
+
+});
+
+
+
+
+//jQuery(document).ready(function(){
 
 //Modal 	
-jQuery( "#single-wrapper" ).click(function() {
-  jQuery('#modal').modal('show');
-});
+	// jQuery( "#single-wrapper" ).click(function() {
+	// 	jQuery('#modal').modal('show');
+	// 	console.log('Testing Tesla Model 3');
+	// });
 
 
 
@@ -68,7 +140,22 @@ jQuery( "#single-wrapper" ).click(function() {
 	// 	alert("Here after you cant click Div id1. Only once fired");
 	// });
 
-});
+//});
+
+
+
+
+	
+	
+
+	// if(ele.length >= 2){
+	// 		console.log('clicked twice');
+	// }
+
+
+
+
+
 
 </script>
 
