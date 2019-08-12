@@ -49,61 +49,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 
 
-jQuery(window).on("load", function(){
-  
-  	jQuery( "#single-wrapper" ).click(function() {
-		jQuery('#modal').modal('show');
-		// console.log('Testing Tesla Model 3');
-	});
 
-
-//Stops the videos when clicked away
-	 jQuery('#modal').each(function(){
-            var src = jQuery(this).find('iframe').attr('src');
-
-        jQuery(this).on('click', function(){
-
-            jQuery(this).find('iframe').attr('src', '');
-            jQuery(this).find('iframe').attr('src', src);
-
-		});
-	});
-	
-
-	
-	// var ele = document.getElementById('single-wrapper');
-
-	// for( ele = 0; ele < 10; ele++){
-	// 	jQuery("#single-wrapper"+ele+"").click(function(){
-	// 		console.log("You have clicked: ", jQuery(this).attr('id'));            
-	// 	});
-	// }
-
-
-const ele = document.getElementById('single-wrapper');
-let x = 0;
-
-ele.addEventListener('click', () => {
-console.log(`You have clicked:`, ++x, `times`);
-
-if (x >= 2){
-	console.log(`a message`);
-	location.reload(true);
-} 
-
-});
-
-
-
-
-
-
-	// jQuery("#single-wrapper").one("click", function() {
-	// 	console.log("Here after you cant click Div id1. Only once fired");
-	// 	location.reload(true);
-	// });
-
-});
 
 
 
@@ -162,6 +108,7 @@ if (x >= 2){
 
 <div class="wrapper" id="single-wrapper">
 	
+<section id="headerSliderProduct">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 <?php if( get_field('parallax_image') ): ?>
@@ -173,7 +120,10 @@ if (x >= 2){
  <div class="parallax-no single-pro-page no-click" data-toggle="modal" id="clicked-para" style="background-image: url('https://wordpress-293167-900918.cloudwaysapps.com/wp-content/uploads/2019/06/EOS-Header.jpg');"></div>
        
 							<?php endif; ?>
+					
 							
+</section>
+
 
 <div class="container p4">							
 	
