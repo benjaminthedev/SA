@@ -9,7 +9,7 @@ original[0].addEventListener('click',
 original[1].addEventListener('click',
     function () {
         console.log('second one clicked');
-        window.location = "/product-category/music/"
+        window.location = "/product-category/art/"
     })
 
 
@@ -22,13 +22,13 @@ original[2].addEventListener('click',
 original[3].addEventListener('click',
     function () {
         console.log('fourth one clicked');
-        window.location = "/product-category/history/"
+        window.location = "/product-category/music/"
     })
 
 original[4].addEventListener('click',
     function () {
         console.log('fifth one clicked');
-        window.location = "/product-category/art/"
+        window.location = "/product-category/history/"
     })
 
 original[5].addEventListener('click',
@@ -47,4 +47,4 @@ original[7].addEventListener('click',
     function () {
         console.log('eighth one clicked');
         window.location = "/product-category/on-sale/"
-    })
+    })  
