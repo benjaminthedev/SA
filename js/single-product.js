@@ -5,11 +5,6 @@ jQuery(window).on("load", function () {
     jQuery('.entry-summary').detach().prependTo('.product-info');
     jQuery('.single-product button.single_add_to_cart_button.button.alt').appendTo('.single-product .woocommerce-grouped-product-list-item');
 
-
-
-
-
-
     jQuery("section#headerSliderProduct #clicked-para").click(function () {
         jQuery('#modal').modal('show');
         // console.log('Testing Tesla Model 3');
