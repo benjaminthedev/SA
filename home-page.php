@@ -168,7 +168,44 @@ wp_reset_postdata();?>
 		<div class="col-md-3 mt-5">
 			<h4>Phil Grabsky's Blog</h4>
 				<div class="external-rss-feed">
-	 				<?php echo do_shortcode('[wp_rss_retriever url="https://www.exhibitiononscreenblog.com/blog/?format=rss" items="2" excerpt="25" read_more="true" credits="false" new_window="true" thumbnail="200" cache="7200"]'); ?>
+	 				<?php //echo do_shortcode('[wp_rss_retriever url="https://www.exhibitiononscreenblog.com/blog/?format=rss" items="2" excerpt="25" read_more="true" credits="false" new_window="true" thumbnail="200" cache="7200"]'); ?>
+
+					 <?php if( have_rows('blog') ): ?>
+
+	
+
+	<?php while( have_rows('blog') ): the_row(); 
+
+		// vars
+		$title = get_sub_field('title');
+		$snippet = get_sub_field('snippet');
+		$link = get_sub_field('link');
+
+		?>
+
+		
+	<div class="post-home">
+
+		<?php if( $title ): ?>
+			<a href="<?php echo $link; ?>" target="_blank"><?php echo $title; ?></a>
+		<?php endif; ?>
+
+
+		    <p><?php echo $snippet; ?>...</p>
+			
+
+
+		<?php if( $link ): ?>
+			<a href="<?php echo $link; ?>" target="_blank">Read More »</a>
+		<?php endif; ?>
+
+			</div>
+
+		
+
+	<?php endwhile; ?>
+		<?php endif; ?>
+
 	 			</div>		 
 		</div>										
 	</div>

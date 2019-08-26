@@ -23,16 +23,10 @@ p.woocommerce-result-count {
     display: none;
 }
 
-// ul.products .woocommerce-loop-product__title{
-//     padding: .5em 20px !important;
-//     font-size: 1.3em!important;
-//     line-height: 26px !important;
-// }
-
-ul.products .woocommerce-loop-product__title {
-    padding: 0.2em 15px!important;
-    font-size: 1.1em!important;
-    line-height: 24px!important;
+ul.products .woocommerce-loop-product__title{
+    padding: .5em 20px !important;
+    font-size: 1.3em!important;
+    line-height: 26px !important;
 }
 
 ul.products li span.price,
@@ -162,18 +156,6 @@ h1.first-heading {
 }
 .main-slider{
   margin-bottom: 20px;
-}
-
-//Home Page Blog Section (new)
-
-.post-home {
-    margin-bottom: 30px;
-    border-bottom: 1px solid #666;
-    padding-bottom: 20px;
-}   
-
-.post-home:nth-child(2){
-  border: none;
 }
 
 // Slider Section - Remove WaterMark - Keep this water mark
@@ -482,10 +464,6 @@ input.submit-newsletter:hover{
   display:none !important;
 }
 
-section.up-sells.upsells.products{
-  display: none;
-}
-
 .single-product a.woocommerce-LoopProduct-link.woocommerce-loop-product__link{
   color: #000;
 }
@@ -566,38 +544,15 @@ span.quote{
     /* width: 100% !important; */
 }
 
- .single-product tr {
-    // width: 44%;
-    width: 104%;
+.single-product tr {
+    width: 31%;
     border: 1px solid #999;
     float: left;
     display: block;
     height: 230px;
     margin: 6px;
-    padding: 10px 10px 10px 30px;
+    padding: 10px;
 }
-
- tr.woocommerce-grouped-product-list-item.tr-3{
-    width: 30%;
-    border: 1px solid #999;
-    float: left;
-    display: block;
-    height: 270px;
-    margin: 6px;
-    padding: 10px 10px 41px 10px !important;
-}
-
-//Singular Product
-// .single-product .summary.entry-summary {
-//     width: 40%;
-//     border: 1px solid #000;
-//     padding: 20px;
-// }
-
-// .single-product button.btn.btn-outline-primary {
-//     margin-top: 30px;
-// }
-
 .single-product td.woocommerce-grouped-product-list-item__label,
 .single-product td.woocommerce-grouped-product-list-item__quantity {
     display: block;
@@ -616,6 +571,67 @@ span.quote{
 
 
 
+
+// Single Product Video Pop Up 
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 10; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    /* background-color: #fefefe; */
+    margin: 5% auto;
+    padding: 0px 20px;
+    /* border: 1px solid #888; */
+    width: 90%;
+    background: none;
+    border: none;
+}
+
+/* The Close Button */
+.close {
+    color: #fff;
+    float: right;
+    font-size: 52px;
+    font-weight: 700;
+    margin-left: -70px;
+    z-index: 2151 !important;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.embed-container { 
+  /* position: relative;  */
+  padding-bottom: 40.25%;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+} 
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed { 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
 
 //Footer
@@ -669,14 +685,17 @@ ul#menu-useful-links li a:hover{
   color:#ff9000;
 }
 
+
 // Single Product Styles
+
+
+
 .postid-11059 .single-product tr{
   width: 70% !important;
 }
 
-.single-product .entry-content.woocommer-wrapper {
-  padding: 20px;
-}
+
+
 
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) { 
