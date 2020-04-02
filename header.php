@@ -16,6 +16,16 @@ $container = get_theme_mod( 'understrap_container_type' );
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141717600-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-141717600-1');
+</script>
+
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
@@ -63,11 +73,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<?php echo do_shortcode ('[woocommerce_product_search]'); ?>
 
+					<?php //echo do_shortcode('[yith_woocommerce_ajax_search]');?>
+
+					
 
 
 
 
-					<!-- <form method="get" id="searchform" action="<?php //echo esc_url( home_url( '/' ) ); ?>" role="search">
+
+					 <!-- <form method="get" id="searchform" action="<?php //echo esc_url( home_url( '/' ) ); ?>" role="search">
 					<label class="sr-only" for="s"><?php //esc_html_e( 'Search', 'understrap' ); ?></label>
 					<div class="input-group">
 						<input class="field form-control" id="s" name="s" type="text"
@@ -77,7 +91,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							value="&#xf002;">
 						</span>
 					</div>
-				</form> -->
+				</form>  -->
 
 				</div>
 

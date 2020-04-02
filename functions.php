@@ -100,6 +100,60 @@ function only_grouped_products( $tax_query ){
 }
 
 
+
+//Outputs terms
+// add_filter( 'body_class', 'output_product_cat_on_body' );
+
+// function output_product_cat_on_body( $classes ) {
+//   if ( is_singular( 'product' ) ) {
+// 		global $post;
+
+// 		$terms = get_the_terms( $post->ID, 'product_cat' );
+
+// 		foreach ( $terms as $term )
+// 			$classes[] = 'term-' . $term->slug;
+// 	}
+// 	return $classes;
+// }
+
+add_filter( 'post_class', 'output_product_cat_on_body' );
+
+ function output_product_cat_on_body( $classes, $class, $post_id ) {
+    $product = get_product( $post_id );
+    if ( $product ) {
+        if ( $product->is_on_sale() ) {
+            $classes[] = 'sale';
+        }
+        if ( $product->is_featured() ) {
+            $classes[] = 'featured';
+		}
+		if ( $product->is_type('variable') ) {
+			$classes[] = 'type-variable';
+		}
+        $classes[] = $product->stock_status;
+    }
+    return $classes;
+}
+
+
+
+
+/*
+If is grouped product 
+then add the class grouped-product
+
+
+
+*/
+
+//blah
+// function remove_core_updates(){
+// global $wp_version;return(object) array('last_checked'=> time(),'version_checked'=> $wp_version,);
+// }
+// add_filter('pre_site_transient_update_core','remove_core_updates');
+// add_filter('pre_site_transient_update_plugins','remove_core_updates');
+// add_filter('pre_site_transient_update_themes','remove_core_updates');
+
   
   
   
