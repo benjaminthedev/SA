@@ -459,10 +459,14 @@ input.submit-newsletter:hover{
 }
 
 //Related & Upsale Products 
-.single-product section.up-sells.upsells.products span.price,
+// .single-product section.up-sells.upsells.products span.price,    
+
+
+//This above
 .single-product section.related.products span.price{
   display:none !important;
 }
+
 
 .single-product a.woocommerce-LoopProduct-link.woocommerce-loop-product__link{
   color: #000;
@@ -687,6 +691,8 @@ ul#menu-useful-links li a:hover{
 
 
 // Single Product Styles
+
+
 
 .postid-11059 .single-product tr{
   width: 70% !important;

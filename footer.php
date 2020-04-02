@@ -19,11 +19,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 <div class="before-footer">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-12">
-				<h5>Subscribe to our FREE email newsletter to stay up-to-date </h5>
+			<div class="col-sm-12 offset-md-2 offset-lg-2">
+				<h5>Subscribe to our FREE email newsletter to stay up-to-date  </h5>
+
+				
 
 				<div class="newsletter-sign-up">
-						<?php echo do_shortcode('[mc4wp_form id="10711"]'); ?>
+						<?php //echo do_shortcode('[mc4wp_form id="10711"]'); ?>
+
+						<a href="/newsletter-sign-up/">Sign Up Here</a>
 				</div>
 			</div>
 			

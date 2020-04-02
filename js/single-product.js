@@ -5,14 +5,8 @@ jQuery(window).on("load", function () {
     jQuery('.entry-summary').detach().prependTo('.product-info');
     jQuery('.single-product button.single_add_to_cart_button.button.alt').appendTo('.single-product .woocommerce-grouped-product-list-item');
 
-
-
-
-
-
     jQuery("section#headerSliderProduct #clicked-para").click(function () {
         jQuery('#modal').modal('show');
-        // console.log('Testing Tesla Model 3');
     });
 
 
@@ -21,59 +15,22 @@ jQuery(window).on("load", function () {
         var src = jQuery(this).find('iframe').attr('src');
 
         jQuery(this).on('click', function () {
-
             jQuery(this).find('iframe').attr('src', '');
             jQuery(this).find('iframe').attr('src', src);
 
         });
     });
 
-
-
-    // var ele = document.getElementById('single-wrapper');
-
-    // for( ele = 0; ele < 10; ele++){
-    // 	jQuery("#single-wrapper"+ele+"").click(function(){
-    // 		console.log("You have clicked: ", jQuery(this).attr('id'));            
-    // 	});
-    // }
-
-
-    // const ele = document.getElementById('single-wrapper');
-    // let x = 0;
-
-    // ele.addEventListener('click', () => {
-    // console.log(`You have clicked:`, ++x, `times`);
-
-    // if (x >= 2){
-    // 	console.log(`a message`);
-    // 	location.reload(true);
-    // } 
-
-    // });
-
-
-
-
-
-
-    // jQuery("#single-wrapper").one("click", function() {
-    // 	console.log("Here after you cant click Div id1. Only once fired");
-    // 	location.reload(true);
-    // });
-
 });
-
+//end jquery
 
 
 
 // finding .single-product tr and killing link
 
 const link_kill = document.querySelectorAll('.single-product td label a');
-console.log(link_kill);
 
 link_kill.forEach(function (link_kill) {
-    console.log(link_kill);
     link_kill.removeAttribute("href");
 });
 
@@ -99,3 +56,21 @@ function clicky() {
 }
 
 clicky();
+
+//created func to get class and check if more than 2, if so add a new class I can target in css
+function addingClassesToTr(){
+
+    const tables = document.querySelectorAll('.woocommerce-grouped-product-list tr');
+    
+    //Check to see if more than 2
+    if (tables.length >= 2){
+        //If so then we add the class .tr-3
+        tables.forEach(function (table) {
+            table.classList.add('tr-3');
+        });
+        
+    }
+}
+
+addingClassesToTr();
+

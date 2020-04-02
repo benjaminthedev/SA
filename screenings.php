@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Two Column Page
+ * Template Name: Two Column Screening Template
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
@@ -25,8 +25,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
 		<div class="row">
-			
+          <div class="col-md-12">
+            <h1><?php the_field('title'); ?></h1>
+            <?php the_field('text_section'); ?>    
+          </div>  
+        </div><!-- end row -->
 
+
+
+        <div class="row">
         <div class="col-md-6">
             <?php
                 if( have_rows('left_content') ):
@@ -55,10 +62,17 @@ $container = get_theme_mod( 'understrap_container_type' );
                 else :
                 endif;
             ?>
-        </div>
-        
+        </div>	
+    </div><!-- end row -->            
+
 		</div><!-- .row -->
 	</div><!-- #content -->
 </div><!-- #page-wrapper -->
-
 <?php get_footer(); ?>
+
+
+<style>
+.parallax{
+    height: 400px;
+}
+</style>
