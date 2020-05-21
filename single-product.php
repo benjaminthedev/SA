@@ -110,12 +110,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 														<p><strong><?php the_sub_field('title'); ?></strong></p>
 													<?php endif; ?>	
 
-													<!-- <?php //if( get_row_layout('running_time') ): ?>
-														<p>Running Time: <?php //	the_sub_field('running_time'); ?></p>
-													<?php //endif; ?>	 -->
+													 <?php if( get_row_layout('running_time') ): ?>
+														<p>Running Time: <?php the_sub_field('running_time'); ?></p>
+													<?php endif; ?>	
 												
 													<?php if( get_row_layout('subtitles') ): ?>
-														<p><strong>DVD has these subtitle</strong>: <?php the_sub_field('subtitles'); ?></p>
+														<p><strong>DVD has these subtitles</strong>: <?php the_sub_field('subtitles'); ?></p>
 													<?php endif; ?>	
 
 													<?php if( get_row_layout('extra_info') ): ?>	
