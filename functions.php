@@ -40,8 +40,15 @@ foreach ( $understrap_includes as $file ) {
  */
 function get_scripts() {
 		//Use as template if needed.
+
+		
 	//wp_enqueue_script( 'customJSProductPage', get_stylesheet_directory_uri() . '/js/single-product.js', array(), '1.0.0', true );
-	
+	//wp_enqueue_style( 'customStyle', get_stylesheet_directory_uri() . '/assets/custom-css.css', array() );
+
+	//Custom Style
+	//wp_enqueue_style( 'customStyle', get_stylesheet_directory_uri() . '/custom-style.css', array() );
+	wp_enqueue_style( 'newResponsiveStyles', get_stylesheet_directory_uri() . '/NewResponsive.css', array() );
+
 	//Conditionally Loading The JS for single product
 	if (is_product()) {
 		wp_enqueue_script( 'customJSProductPage', get_stylesheet_directory_uri() . '/js/single-product.js', array(), '1.0.0', true );
