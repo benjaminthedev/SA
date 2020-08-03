@@ -58,6 +58,10 @@ function get_scripts() {
 	if (is_page(262)) {
 		wp_enqueue_script( 'homeJs', get_stylesheet_directory_uri() . '/js/home-page.js', array(), '1.0.0', true );
 	}
+
+	if (is_page(8)) {
+		wp_enqueue_script( 'checkoutJS', get_stylesheet_directory_uri() . '/js/checkout.js', array(), '1.0.0', true );
+	}
   
 	
 }
