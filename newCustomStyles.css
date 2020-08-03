@@ -1,0 +1,92 @@
+   /*-- More CSS Edits for SIMON....... --*/
+
+    
+.payment_box_new_message{
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1em;
+    margin: 1em 0;
+    font-size: 22px;
+    border-radius: 2px;
+    line-height: 1.5;
+    background-color: #dfdcde;
+    color: #515151;
+    font-weight: 700;
+}
+
+.single-product span.woocommerce-Price-amount.amount:after {
+    content: ' Please select quantity then click add to cart.';
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    margin: 15px 0;
+}
+
+tr.woocommerce-grouped-product-list-item.tr-3{
+/*   height: 70vh; */
+    height: auto;
+  padding: 30px 10px 41px 10px!important;
+}
+
+td.woocommerce-grouped-product-list-item__label {
+    margin-bottom: 20px;
+}
+
+
+/* home page boxes.............. */
+
+#woo-cat-image {
+    height: 233px !important;
+    background-repeat: no-repeat;
+    display: flex;
+    background-size: contain !important;
+    padding: 0;
+    width: 100%;
+}
+
+/*continue shopping stupid btn  */
+a.button.wc-forward {
+    display: none;
+}
+
+/*check out images  */
+
+.woocommerce-cart .woocommerce ul.products li.product a img{
+  width: 60%;
+}
+
+
+
+/* -- New Custom Responsive Edits For SIMON....... */
+
+
+@media(min-width: 169px) and (max-width: 768px){
+	.main-slider{
+	  display: none;
+	}
+  
+  	.parallax-no,
+  	.parallax{
+    background-size: contain;
+          height: 130px;
+		}
+  
+  
+}
+
+/*ipads*/
+
+
+    @media(min-width: 769px) and (max-width: 1200px){
+    ul.woocommerce-products-cats li {
+    width: 28% !important;
+    margin-bottom: 20px !important;
+    }
+      
+    .parallax-no,
+  	.parallax{
+      background-size: contain;
+		}
+}
+ 
