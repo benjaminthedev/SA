@@ -47,7 +47,8 @@ function get_scripts() {
 
 	//Custom Style
 	//wp_enqueue_style( 'customStyle', get_stylesheet_directory_uri() . '/custom-style.css', array() );
-	wp_enqueue_style( 'newResponsiveStyles', get_stylesheet_directory_uri() . '/NewResponsive.css', array() );
+	wp_enqueue_style( 'newCustomStyles', get_stylesheet_directory_uri() . '/newCustomStyles.css', array(), '1.0.0', true );
+	wp_enqueue_style( 'newResponsiveStyles', get_stylesheet_directory_uri() . '/NewResponsive.css', array(), '1.0.0', true );
 
 	//Conditionally Loading The JS for single product
 	if (is_product()) {
