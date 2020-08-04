@@ -58,6 +58,12 @@ a.button.wc-forward {
 
 
 
+a.button.wc-forward {
+    display: none !important;
+}
+
+
+
 /* -- New Custom Responsive Edits For SIMON....... */
 
 
