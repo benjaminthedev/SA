@@ -1,4 +1,6 @@
 
+
+
 jQuery(window).on("load", function () {
     jQuery('.single-product .woocommerce-product-gallery, .single-product .woocommerce-notices-wrapper, .single-product ul.tabs.wc-tabs').hide();
     //Move the add to basket to the right place
@@ -41,6 +43,16 @@ const ele = document.querySelector('section#headerSliderProduct #clicked-para');
 
 console.log(ele);
 
+
+
+const outOfStockMessage = document.querySelector('.out-of-stock');
+console.log(outOfStockMessage)
+outOfStockMessage.innerText = 'This title is available for streaming & download while DVD is currently out of stock.';
+console.log(outOfStockMessage)
+
+
+
+
 function clicky() {
     let x = 0;
 
@@ -58,19 +70,22 @@ function clicky() {
 clicky();
 
 //created func to get class and check if more than 2, if so add a new class I can target in css
-function addingClassesToTr(){
+function addingClassesToTr() {
 
     const tables = document.querySelectorAll('.woocommerce-grouped-product-list tr');
-    
+
     //Check to see if more than 2
-    if (tables.length >= 2){
+    if (tables.length >= 2) {
         //If so then we add the class .tr-3
         tables.forEach(function (table) {
             table.classList.add('tr-3');
         });
-        
+
     }
 }
 
 addingClassesToTr();
+
+
+
 
