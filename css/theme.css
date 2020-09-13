@@ -10626,14 +10626,14 @@ ul#main-menu li.page-item-10635.current_page_item.active a {
 .woocommerce.columns-5 ul.products li.product {
   width: 19.95%; }
 
-.woocommerce ul.products li.product,
+/* .woocommerce ul.products li.product,
 .woocommerce-page ul.products li.product {
   float: left;
   margin: 0 0% 0.092em 0;
   padding: 0;
   position: relative;
   width: 22.05%;
-  margin-left: 0; }
+  margin-left: 0; } */
 
 li.shop-link {
   background: #ff9000;

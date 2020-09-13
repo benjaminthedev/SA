@@ -86,6 +86,16 @@ function trim_excerpt($text){
 add_filter('get_the_excerpt', 'trim_excerpt');
 
 
+// Custom Test Quote
+
+function before_the_price(){
+	echo '<span class="info-s">DOWNLOAD / STREAM / DVD</span>';
+}
+
+add_action(woocommerce_shop_loop_item_title, before_the_price);
+
+
+
 
 //Short code for [quote]
 function caption_shortcode( $atts, $content = null ) {
