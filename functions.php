@@ -58,6 +58,10 @@ function get_scripts() {
 	if (is_page(262)) {
 		wp_enqueue_script( 'homeJs', get_stylesheet_directory_uri() . '/js/home-page.js', array(), '1.0.0', true );
 	}
+
+	if (is_page(8)) {
+		wp_enqueue_script( 'checkoutJS', get_stylesheet_directory_uri() . '/js/checkout.js', array(), '1.0.0', true );
+	}
   
 	
 }
@@ -124,24 +128,29 @@ function only_grouped_products( $tax_query ){
 // 	return $classes;
 // }
 
-add_filter( 'post_class', 'output_product_cat_on_body' );
 
- function output_product_cat_on_body( $classes, $class, $post_id ) {
-    $product = get_product( $post_id );
-    if ( $product ) {
-        if ( $product->is_on_sale() ) {
-            $classes[] = 'sale';
-        }
-        if ( $product->is_featured() ) {
-            $classes[] = 'featured';
-		}
-		if ( $product->is_type('variable') ) {
-			$classes[] = 'type-variable';
-		}
-        $classes[] = $product->stock_status;
-    }
-    return $classes;
-}
+
+
+//re-uncomment this on the live site - on MAMP it breaks......
+
+// add_filter( 'post_class', 'output_product_cat_on_body' );
+
+//  function output_product_cat_on_body( $classes, $class, $post_id ) {
+//     $product = get_product( $post_id );
+//     if ( $product ) {
+//         if ( $product->is_on_sale() ) {
+//             $classes[] = 'sale';
+//         }
+//         if ( $product->is_featured() ) {
+//             $classes[] = 'featured';
+// 		}
+// 		if ( $product->is_type('variable') ) {
+// 			$classes[] = 'type-variable';
+// 		}
+//         $classes[] = $product->stock_status;
+//     }
+//     return $classes;
+// }
 
 
 

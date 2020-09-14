@@ -10578,9 +10578,9 @@ ul.products .woocommerce-loop-product__title {
   font-size: 1.1em !important;
   line-height: 24px !important; }
 
-ul.products li span.price,
+/* ul.products li span.price,
 ul.products .add-to-cart-container {
-  display: none !important; }
+  display: none !important; } */
 
 .wpmenucart-display-right * {
   color: #000 !important; }
@@ -10912,6 +10912,14 @@ button.btn.btn-outline-primary {
   text-transform: uppercase !important;
   font-size: 12px !important; }
 
+
+/* Price From */
+span.price:before {
+   content: "price from ";
+}
+
+
+  
 .btn-outline-primary:hover, .wpcf7 input:hover[type=submit],
 .wpcf7 input[type=submit]:hover,
 input.submit-newsletter:hover {

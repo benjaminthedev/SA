@@ -362,6 +362,68 @@ section.newsletter-sp li {
   list-style-type: none;
 }
 
+//This is the styles for the new woocommerce landing design 2020 - Start
+
+
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+	float: left;
+    /* margin: 0 0 .092em 0; */
+    padding: 0;
+    position: relative;
+    width: 23%;
+    margin: 0px 25px 0 0;
+    min-height: 300px;
+/*    background: aliceblue;  */
+}
+
+ul.products li span.price{
+	display: block !important;
+}
+
+span.price:before {
+    content: "price from ";
+}
+
+ul.products .woocommerce-loop-product__title{
+padding: 0px !important;
+margin: 0px !important;
+}
+
+.woocommerce .woocommerce-ordering, .woocommerce-page .woocommerce-ordering {
+    display: block;
+}
+.berocket_better_labels span {
+    margin-top: 9.04em !important;
+}
+
+
+/*
+
+.berocket_better_labels span {
+    margin-top: 9.04em !important;
+}
+
+
+ul.products.columns-4 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;   
+}
+
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product{
+    width: 20vw;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+*/
+
+
+
+
+//This is the styles for the new woocommerce landing design 2020 - END
 
 section.newsletter-sp input[type='checkbox'] {
   margin-right: 10px;
@@ -384,6 +446,9 @@ section.newsletter-sp input[type='checkbox'] {
   color: #fff;
   font-weight: bold;
 }
+
+
+
 
 
 //On Sale featured
@@ -734,6 +799,10 @@ span.quote {
   display: flex;
   flex-direction: row;
   /* width: 100% !important; */
+}
+
+a.button.wc-forward {
+    display: none !important;
 }
 
 .single-product tr {
