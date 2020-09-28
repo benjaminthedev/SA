@@ -87,7 +87,8 @@ add_filter('get_the_excerpt', 'trim_excerpt');
 
 
 function cloudways_short_des_product() {
-    the_excerpt();
+	echo '<div class="woo__excerptWrapper><p class="woo__excerpt">' . the_excerpt() . '</p></div>';
+	//the_excerpt();
 }
 
 add_action( 'woocommerce_before_shop_loop_item_title', 'cloudways_short_des_product', 40 );
