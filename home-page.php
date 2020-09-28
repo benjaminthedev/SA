@@ -27,6 +27,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<main class="site-main" id="main" role="main">
 										<?php while ( have_posts() ) : the_post(); ?>
 											<div class="main-slider">                    
+												<?php //echo do_shortcode('[wonderplugin_slider id=1]'); ?>
 												<?php echo do_shortcode('[soliloquy id="19410"]'); ?>
 											</div>
 											
