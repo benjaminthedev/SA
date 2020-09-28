@@ -86,13 +86,49 @@ function trim_excerpt($text){
 add_filter('get_the_excerpt', 'trim_excerpt');
 
 
-// Custom Test Quote
+function cloudways_short_des_product() {
+    the_excerpt();
+}
+
+add_action( 'woocommerce_before_shop_loop_item_title', 'cloudways_short_des_product', 40 );
+
+
+
+// 
+// 
+// // Custom Test Quote
 
 function before_the_price(){
 	echo '<span class="info-s">DOWNLOAD / STREAM / DVD</span>';
 }
 
 add_action(woocommerce_shop_loop_item_title, before_the_price);
+
+//Removes popularity & 
+
+function my_woocommerce_catalog_orderby( $orderby ) {
+    unset($orderby["popularity"]);
+    unset($orderby["rating"]);
+    return $orderby;
+}
+add_filter( "woocommerce_catalog_orderby", "my_woocommerce_catalog_orderby", 20 );
+
+//short desc
+//
+
+
+
+
+// add_action( ‘ocean_after_archive_product_add_to_cart’, ‘custom_after_addtocart’ );
+// function custom_after_addtocart() {
+
+// global $product;
+
+// if ( $product->get_short_description() ) {
+// echo $product->get_short_description();
+// }
+
+// }
 
 
 
