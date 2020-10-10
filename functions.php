@@ -86,24 +86,35 @@ function trim_excerpt($text){
 add_filter('get_the_excerpt', 'trim_excerpt');
 
 
-function cloudways_short_des_product() {
-	echo '<div class="woo__excerptWrapper><p class="woo__excerpt">' . the_excerpt() . '</p></div>';
-	//the_excerpt();
+// function cloudways_short_des_product() {
+// 	echo '<div class="woo__excerptWrapper><p class="woo__excerpt">' . the_excerpt() . '</p></div>';
+// 	//the_excerpt();
+// }
+
+// add_action( 'woocommerce_before_shop_loop_item_title', 'cloudways_short_des_product', 40 );
+// 
+// 
+
+add_action( 'woocommerce_after_shop_loop_item_title', 'output_product_excerpt', 20 ); 
+function output_product_excerpt() { 
+    global $post; 
+
+    //get the individual products' categories and put them in an array
+    $terms = wp_get_post_terms( $post->ID, 'product_cat' );
+    foreach ( $terms as $term ) {
+        $product_categories[] = $term->term_id;
+    };
+
+    //check if the array contains your specific $category_id that you are targeting
+    if ( is_shop() && in_array( $category_id, $product_categories )) {
+        echo '<div class="my-excerpt">'.wp_trim_words($post->post_excerpt,10).'</div>';
+    }
 }
-
-add_action( 'woocommerce_before_shop_loop_item_title', 'cloudways_short_des_product', 40 );
-
 
 
 // 
 // 
-// // Custom Test Quote
 
-function before_the_price(){
-	echo '<span class="info-s">DOWNLOAD / STREAM / DVD</span>';
-}
-
-add_action(woocommerce_shop_loop_item_title, before_the_price);
 
 //Removes popularity & 
 
@@ -118,18 +129,45 @@ add_filter( "woocommerce_catalog_orderby", "my_woocommerce_catalog_orderby", 20 
 //
 
 
+function show_subtitle() {
+global $product;
+$id = $product->get_id();
+$excerpt = get_field('excerpt',$id);
+$mediaType = get_field('media_type',$id);
+$pricesFrom = get_field('price_from',$id);
+	
+	
+    if ( $excerpt ) { 
+        echo '<div class="woo__excerpt"><p>'.$excerpt.'<p></span>';
+    }
+	
+	if ( $mediaType || $pricesFrom ) { 
+        echo '
+		<div class="woo_mediaType__pricesFrom__wrapper">
+		<div class="woo__mediaType">'.$mediaType.'</div>
+		<div class="woo__pricesFrom">From £'.$pricesFrom.'</div>
+		</div>		
+		';
+    }
+
+}
+add_action('woocommerce_after_shop_loop_item_title', 'show_subtitle', 1 );
 
 
-// add_action( ‘ocean_after_archive_product_add_to_cart’, ‘custom_after_addtocart’ );
-// function custom_after_addtocart() {
 
-// global $product;
 
-// if ( $product->get_short_description() ) {
-// echo $product->get_short_description();
+
+
+
+// // Custom Test Quote
+
+// function before_the_price(){
+// 	echo '<span class="info-s">DOWNLOAD / STREAM / DVD</span>';
 // }
 
-// }
+// add_action(woocommerce_shop_loop_item_title, before_the_price, 10);
+
+
 
 
 
