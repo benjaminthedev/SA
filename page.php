@@ -22,9 +22,46 @@ $container = get_theme_mod( 'understrap_container_type' );
 <div class="wrapper" id="page-wrapper">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
-	<?php if( get_field('parallax_image') ): ?>
-		<div class="parallax pro-cat-page"  style="background-image: url(<?php the_field('parallax_image'); ?>);"></div>
-	<?php endif; ?>
+	
+	<div class="productCat__image">
+		<?php if( get_field('parallax_image') ): ?>
+			<div class="parallax pro-cat-page"  style="background-image: url(<?php the_field('parallax_image'); ?>);"></div>
+		<?php endif; ?>
+	</div>	
+
+
+	<div class="productCat__imageResponsive">
+
+		<?php if( get_field('parallax_image_responsive') ): ?>
+			<div class="parallax_image_responsive"  style="background-image: url(<?php the_field('parallax_image_responsive'); ?>);"></div>
+		<?php endif; ?>
+
+	</div>
+
+	<style>
+		/* Temp Styles! */
+	@media only screen and (max-width: 600px) {
+		/* body.exhibition-on-screen-2 {
+			background-color: lightblue !important;
+		} */
+
+		.parallax_image_responsive {
+			width: 92vw;
+			height: 44vh;
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+
+		.exhibition-on-screen-2 .productCat__image {
+			display: none;
+		}
+	}
+	</style>
+
+
+	
+
+
 
 		<div class="row">
 
